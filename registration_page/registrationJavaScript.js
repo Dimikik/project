@@ -7,12 +7,13 @@ let err = document.getElementById("err");
 
 function Err(str){
     err.innerHTML = '';
-    let err_str = `<p>${str}</p>`;
+    let err_str = `<p id="err_text">${str}</p>`;
     err.insertAdjacentHTML("beforeend", err_str);
 }
 
 signUpBtn.onclick = (event) => {
-    if (login.value.length < 6) Err('Логин слишком короткий');
+    if (login.value.length == 0 && password1.value.length == 0 && password2.value.length == 0) pass;
+    else if (login.value.length < 6) Err('Логин слишком короткий');
     else if (password1.value.length < 8) Err('Пароль слишком короткий');
     else if (password1.value != password2.value) Err('Пароли не совпадают!');
     else if ((localStorage.getItem(login.value) == null) && (login.value.length != 0) && (password1.value.length != 0) && (password2.value.length != 0)) {
