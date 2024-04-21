@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    padding: 15px;
+    background-color: rgb(254, 245, 233);
+}
+h2{
+    font-family: "Montserrat", sans-serif;
+}
+.genre{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+}
+.genres{
+    display: grid;
+    grid-template-columns: 1ch 1ch 1ch;
+    width: 700px;
+}
+.flex{
+    height: inherit;
+    width:500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    font-family: "Montserrat", sans-serif;
+    margin: 10px;
+    height: 50px;
+    width: 200px;
+}

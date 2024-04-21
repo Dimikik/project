@@ -12,12 +12,14 @@ function Err(str){
 }
 
 signUpBtn.onclick = (event) => {
-    if (login.value.length == 0 && password1.value.length == 0 && password2.value.length == 0) pass;
-    else if (login.value.length < 6) Err('Логин слишком короткий');
-    else if (password1.value.length < 8) Err('Пароль слишком короткий');
+    if ((localStorage.getItem(login.value) != null)) Err("Такой логин уже есть");
+    else if (login.value.trim().length == 0 && password1.value.length == 0 && password2.value.length == 0) null;
+    else if (login.value.trim().length < 6) Err('Логин слишком короткий');
+    else if (password1.value.trim().length < 8) Err('Пароль слишком короткий');
     else if (password1.value != password2.value) Err('Пароли не совпадают!');
-    else if ((localStorage.getItem(login.value) == null) && (login.value.length != 0) && (password1.value.length != 0) && (password2.value.length != 0)) {
-        localStorage.setItem(login.value, password1.value);
+    else if ((localStorage.getItem(login.value).trim() == null) && (login.value.trim().length != 0) && (password1.value.length != 0) && (password2.value.length != 0)) {
+        localStorage.setItem(login.value.trim(), "[" + password1.value + "]");
         window.location.replace('../authorization_page/authorization.html');
     }
+    login.value = login.value.trim()
 }
