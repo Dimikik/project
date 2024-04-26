@@ -17,7 +17,6 @@ signinBtn.onclick = (event) => {
         }
         else login.value = login.value.trim();
         login.value = login.value.trim();
-        return;
     }
     
     if ((user[0]) == password.value){

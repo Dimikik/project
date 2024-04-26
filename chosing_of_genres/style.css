@@ -4,34 +4,50 @@
     box-sizing: border-box;
 }
 body{
-    padding: 15px;
-    background-color: rgb(254, 245, 233);
+    padding: 75px;
+    background-color: rgb(255, 188, 89);
 }
 h2{
     font-family: "Montserrat", sans-serif;
+    font-size: 30px;
 }
 .genre{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 500px;
+    height: 550px;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 .genres{
     display: grid;
-    grid-template-columns: 1ch 1ch 1ch;
-    width: 700px;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 .flex{
     height: inherit;
-    width:500px;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 button{
+    background-color: rgb(190, 253, 168);
     font-family: "Montserrat", sans-serif;
     margin: 10px;
     height: 50px;
     width: 200px;
+    border: solid 1px black;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+#continue{
+    width: 250px;
+    height: 60px;
+    background-color: rgb(190, 253, 168);
+}
+#continue:hover{
+    background-color: rgb(152, 251, 116);
 }

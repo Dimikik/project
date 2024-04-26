@@ -1,9 +1,21 @@
 'use strict'
 let user = JSON.parse(localStorage.getItem(localStorage.getItem("user")));
 let myGenres = {books: false, anime: false, humor: false, games: false, music: false, health:0,
-                sport: false, buety: false, food: false, technologies: false, cars: false};
+    sport: false, buety: false, food: false, technologies: false, cars: false, space: false};
+if(user[1] != undefined) myGenres = user[1];
+else user[1] = myGenres;
+for (let key in myGenres){
+    let element = document.getElementById(key);
+    if (myGenres[key] == false) element.style.backgroundColor = 'rgb(190, 253, 168)';
+    else element.style.backgroundColor = 'rgb(255, 188, 89)';
+}
 function changeGenres(genre){
+    let element = document.getElementById(genre);
     myGenres[genre] = !myGenres[genre];
+    if(myGenres[genre] == true) {
+        element.style.backgroundColor = "rgb(255, 188, 89)";
+    }
+    else element.style.backgroundColor = "rgb(190, 253, 168)";
 }
 let books = document.getElementById("books");
 let anime = document.getElementById("anime");

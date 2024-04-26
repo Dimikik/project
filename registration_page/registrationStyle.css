@@ -5,7 +5,7 @@
 }
 body{
     padding: 15px;
-    background-color: rgb(254, 245, 233);
+    background-color: rgb(255, 188, 89);
 }
 h2{
     font-size: 45px;
@@ -46,7 +46,7 @@ input{
     background-color: white;
 }
 #signUp:hover{
-    background-color:  rgb(254, 245, 233);
+    background-color:  rgb(255, 188, 100);
 }
 .registration{
     margin: auto;
