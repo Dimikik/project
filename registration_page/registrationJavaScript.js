@@ -18,7 +18,7 @@ signUpBtn.onclick = (event) => {
     else if (password1.value.trim().length < 8) Err('Пароль слишком короткий');
     else if (password1.value != password2.value) Err('Пароли не совпадают!');
     else if ((localStorage.getItem(login.value) == null) && (login.value.trim().length != 0) && (password1.value.length != 0) && (password2.value.length != 0)) {
-        localStorage.setItem(login.value.trim(), "[" + password1.value + "]");
+        localStorage.setItem(login.value.trim(), JSON.stringify([password1.value]));
         window.location.replace('../authorization_page/authorization.html');
     }
     login.value = login.value.trim()

@@ -1,12 +1,14 @@
-'use strict'
+'use strict';
+console.log(123)
+
+let login = localStorage.getItem("user");
 let user = JSON.parse(localStorage.getItem(localStorage.getItem("user")));
-let myGenres = {books: false, anime: false, humor: false, games: false, music: false, health:0,
+let myGenres = {books: false, anime: false, humor: false, games: false, music: false, health: false,
     sport: false, buety: false, food: false, technologies: false, cars: false, space: false};
-if(user[1] != undefined) myGenres = user[1];
-else user[1] = myGenres;
+if(user[1] != undefined) {myGenres = user[1]} else {user[1] = myGenres};
 for (let key in myGenres){
     let element = document.getElementById(key);
-    if (myGenres[key] == false) element.style.backgroundColor = 'rgb(190, 253, 168)';
+    if (myGenres[key] == false) element.style.backgroundColor = 'white';
     else element.style.backgroundColor = 'rgb(255, 188, 89)';
 }
 function changeGenres(genre){
@@ -15,7 +17,7 @@ function changeGenres(genre){
     if(myGenres[genre] == true) {
         element.style.backgroundColor = "rgb(255, 188, 89)";
     }
-    else element.style.backgroundColor = "rgb(190, 253, 168)";
+    else element.style.backgroundColor = "white";
 }
 let books = document.getElementById("books");
 let anime = document.getElementById("anime");
@@ -41,3 +43,11 @@ food.onclick = (event) => changeGenres("food");
 technologies.onclick = (event) => changeGenres("technologies");
 cars.onclick = (event) => changeGenres("cars");
 space.onclick = (event) => changeGenres("space");
+let continueBtn = document.getElementById('continue');
+console.log(continueBtn)
+continueBtn.onclick = (event) =>{
+    console.log(123)
+    user[1] = myGenres;
+    localStorage.setItem(login, JSON.stringify(user));
+    window.location.replace("../news_page/news.html")
+}
