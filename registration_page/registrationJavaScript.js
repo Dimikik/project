@@ -1,4 +1,5 @@
 'use strict'
+if (!(localStorage.getItem("user"))) window.location.replace("../news_page/news.html");
 let login = document.getElementById('login');
 let password1 = document.getElementById('password1');
 let password2 = document.getElementById('password2');

@@ -1,6 +1,5 @@
-'use strict';
-console.log(123)
-
+'use strict'
+if (!(localStorage.getItem(localStorage.getItem("user")))) window.location.replace("../authorization_page/authorization.html");
 let login = localStorage.getItem("user");
 let user = JSON.parse(localStorage.getItem(localStorage.getItem("user")));
 let myGenres = {books: false, anime: false, humor: false, games: false, music: false, health: false,
@@ -49,5 +48,5 @@ continueBtn.onclick = (event) =>{
     console.log(123)
     user[1] = myGenres;
     localStorage.setItem(login, JSON.stringify(user));
-    window.location.replace("../news_page/news.html")
+    window.location.replace("../news_page/news.html");
 }

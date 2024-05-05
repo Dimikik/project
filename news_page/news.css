@@ -6,6 +6,26 @@
 body{
     background-color: rgb(255, 188, 89);
 }
+.lane{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+#chose_genre, #sign_out, #new_news{
+    margin-right: 30px;
+    margin-left: 30px;
+    background-color: rgb(190, 253, 168);
+    font-family: "Montserrat", sans-serif;
+    border: solid 1px black;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 30px;
+    width: 120px;
+}
+#chose_genre:hover, #sign_out:hover, #new_news:hover{
+    background-color: rgb(152, 251, 116);
+}
 .container{
     width: 90%;
     margin: auto;
@@ -40,4 +60,11 @@ h2{
 p{
     font-family: "Montserrat", sans-serif;
     font-size: 15px;
+}
+.text{
+    margin-left: 30px;
+}
+.title{
+    margin-top: 15px;
+    margin-left: 15px;
 }
