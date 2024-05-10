@@ -21,6 +21,10 @@ let chose_genres_btn = document.getElementById("chose_genre");
 chose_genres_btn.onclick = (event) =>{
     window.location.replace("../chosing_of_genres/index.html")
 }
+let new_news_btn = document.getElementById("new_news");
+new_news_btn.onclick = (event) =>{
+    window.location.replace("../new_news_page/index.html");
+}
 let sign_out_btn = document.getElementById("sign_out");
 sign_out_btn.onclick = (event) =>{
     localStorage.setItem("user", undefined);

@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(255, 188, 89);
+}
+h2{
+    font-family: "Montserrat", sans-serif;
+    font-size: 35px;
+    margin: 15px;
+}
+.container{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+    height: 850px;
+    margin-top: 15px;
+}
+.window{
+    height: 40px;
+    width: 80%;
+    display: flex;
+}
+#menu{
+    width: 10%;
+    font-family: "Montserrat", sans-serif;
+    background-color: rgb(190, 253, 168);
+    border: 1px solid black;
+    border-left: 0;
+    cursor: pointer;
+}
+#create{
+    height: 50px;
+    width: 30%;
+    background-color: rgb(190, 253, 168);
+    font-family: "Montserrat", sans-serif;
+    border: solid 1px black;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 15px;
+}
+#menu:hover, #create:hover{
+    background-color: rgb(152, 251, 116);
+}
+input{
+    width: 90%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 150%;
+    background-color: whiite;
+    border: 1px solid black;
+    border-right: 0;
+    outline:none;
+}
+p{
+    margin-top: 20px;
+    height: 80%;
+    width: 80%;
+}
+textarea{
+    font-family: "Montserrat", sans-serif;
+    font-size: 130%;
+    height: 100%;
+    width:100%;
+    resize: none;
+    outline:none;
+    border: 1px solid black;
+}
