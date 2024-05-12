@@ -1,17 +1,19 @@
-'use strict'
+'use strict';
+
 if (!(localStorage.getItem(localStorage.getItem("user")))) window.location.replace("../authorization_page/authorization.html");
-localStorage.setItem("/anime", '[[["title"],["аниме"],["00000001"]]]');
-localStorage.setItem("/books", '[[["title"],["книги"],["00000002"]]]');
-localStorage.setItem("/humor", '[[["title"],["юмор"],["00000003"]]]');
-localStorage.setItem("/games", '[[["title"],["игры"],["00000004"]]]');
-localStorage.setItem("/music", '[[["title"],["музыка"],["00000005"]]]');
-localStorage.setItem("/health", '[[["title"],["здоровье"],["00000006"]]]');
-localStorage.setItem("/sport", '[[["title"],["спорт"],["00000007"]]]');
-localStorage.setItem("/buety", '[[["title"],["красота"],["00000008"]]]');
-localStorage.setItem("/food", '[[["title"],["еда"],["00000009"]]]');
-localStorage.setItem("/technologies", '[[["title"],["технологии"],["00000010"]]]');
-localStorage.setItem("/cars", '[[["title"],["автомобили"],["00000011"]]]');
-localStorage.setItem("/space", '[[["title"],["космос"],["00000012"]]]');
+
+if (localStorage.getItem("/books") == undefined) localStorage.setItem("/books", []);
+if (localStorage.getItem("/anime") == undefined) localStorage.setItem("/anime", []);
+if (localStorage.getItem("/humor") == undefined) localStorage.setItem("/humor", []);
+if (localStorage.getItem("/games") == undefined) localStorage.setItem("/games", []);
+if (localStorage.getItem("/music") == undefined) localStorage.setItem("/music", []);
+if (localStorage.getItem("/health") == undefined) localStorage.setItem("/health", []);
+if (localStorage.getItem("/sport") == undefined) localStorage.setItem("/sport", []);
+if (localStorage.getItem("/buety") == undefined) localStorage.setItem("/buety", []);
+if (localStorage.getItem("/food") == undefined) localStorage.setItem("/food", []);
+if (localStorage.getItem("/technologies") == undefined) localStorage.setItem("/technologies", []);
+if (localStorage.getItem("/cars") == undefined) localStorage.setItem("/cars", []);
+if (localStorage.getItem("/space") == undefined) localStorage.setItem("/space", []);
 let shew_news = [];
 let user = JSON.parse(localStorage.getItem(localStorage.getItem("user")));
 if (user[1] == undefined)  window.location.replace('../chosing_of_genres/index.html');

@@ -59,7 +59,7 @@ input{
 }
 a{
     font-size: 20px;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     text-decoration: none;
     font-weight : 500;
     color: black;
