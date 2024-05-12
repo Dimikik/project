@@ -26,8 +26,13 @@ h2{
     width: 80%;
     display: flex;
 }
-#menu{
+#genres{
     width: 10%;
+    height: inherit;
+}
+#menu{
+    width: 100%;
+    height: 100%;
     font-family: "Montserrat", sans-serif;
     background-color: rgb(190, 253, 168);
     border: 1px solid black;
@@ -70,4 +75,18 @@ textarea{
     resize: none;
     outline:none;
     border: 1px solid black;
+}
+.menu_btn{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-family: "Montserrat", sans-serif;
+    background-color: rgb(255, 222, 222);
+    border: 1px solid black;
+    border-left: 0;
+    cursor: pointer;
+    border: 0 black solid;
+}
+#div{
+    height: 100%;
 }

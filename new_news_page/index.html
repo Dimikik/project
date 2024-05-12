@@ -15,10 +15,27 @@
         <h2>Создать новость</h2>
         <div class="window">
             <input type="text" id="title" placeholder="Заголовок">
-            <button id="menu">Жанр</button>
+            <div id="genres">
+                <button id="menu">Жанр</button>
+                <div id="div" style="display: none;">
+                    <button class="menu_btn" id="books">Книги</button>
+                    <button class="menu_btn" id="humor">Юмор</button>
+                    <button class="menu_btn" id="anime">Аниме</button>
+                    <button class="menu_btn" id="games">Игры</button>
+                    <button class="menu_btn" id="music">Музыка</button>
+                    <button class="menu_btn" id="health">Здоровье</button>
+                    <button class="menu_btn" id="sport">Спорт</button>
+                    <button class="menu_btn" id="buety">Красота и уход</button>
+                    <button class="menu_btn" id="food">Еда</button>
+                    <button class="menu_btn" id="technologies">Технологии</button>
+                    <button class="menu_btn" id="cars">Автомобили</button>
+                    <button class="menu_btn" id="space">Космос</button>
+                </div>
+            </div>
         </div>
         <p><textarea name="comment"></textarea></p>
         <button id="create">Создать</button>
+        <script src="script.js"></script>
     </div>
 </body>
 </html>
