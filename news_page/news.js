@@ -2,18 +2,18 @@
 
 if (!(localStorage.getItem(localStorage.getItem("user")))) window.location.replace("../authorization_page/authorization.html");
 
-if (localStorage.getItem("/books") == undefined) localStorage.setItem("/books", []);
-if (localStorage.getItem("/anime") == undefined) localStorage.setItem("/anime", []);
-if (localStorage.getItem("/humor") == undefined) localStorage.setItem("/humor", []);
-if (localStorage.getItem("/games") == undefined) localStorage.setItem("/games", []);
-if (localStorage.getItem("/music") == undefined) localStorage.setItem("/music", []);
-if (localStorage.getItem("/health") == undefined) localStorage.setItem("/health", []);
-if (localStorage.getItem("/sport") == undefined) localStorage.setItem("/sport", []);
-if (localStorage.getItem("/buety") == undefined) localStorage.setItem("/buety", []);
-if (localStorage.getItem("/food") == undefined) localStorage.setItem("/food", []);
-if (localStorage.getItem("/technologies") == undefined) localStorage.setItem("/technologies", []);
-if (localStorage.getItem("/cars") == undefined) localStorage.setItem("/cars", []);
-if (localStorage.getItem("/space") == undefined) localStorage.setItem("/space", []);
+if (localStorage.getItem("/books") == undefined) localStorage.setItem("/books", "[]");
+if (localStorage.getItem("/anime") == undefined) localStorage.setItem("/anime", "[]");
+if (localStorage.getItem("/humor") == undefined) localStorage.setItem("/humor", "[]");
+if (localStorage.getItem("/games") == undefined) localStorage.setItem("/games", "[]");
+if (localStorage.getItem("/music") == undefined) localStorage.setItem("/music", "[]");
+if (localStorage.getItem("/health") == undefined) localStorage.setItem("/health", "[]");
+if (localStorage.getItem("/sport") == undefined) localStorage.setItem("/sport", "[]");
+if (localStorage.getItem("/buety") == undefined) localStorage.setItem("/buety", "[]");
+if (localStorage.getItem("/food") == undefined) localStorage.setItem("/food", "[]");
+if (localStorage.getItem("/technologies") == undefined) localStorage.setItem("/technologies", "[]");
+if (localStorage.getItem("/cars") == undefined) localStorage.setItem("/cars", "[]");
+if (localStorage.getItem("/space") == undefined) localStorage.setItem("/space", "[]");
 let shew_news = [];
 let user = JSON.parse(localStorage.getItem(localStorage.getItem("user")));
 if (user[1] == undefined)  window.location.replace('../chosing_of_genres/index.html');

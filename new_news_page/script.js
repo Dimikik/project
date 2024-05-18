@@ -7,6 +7,10 @@ menu_btn.onclick = (event) =>{
     if (div.style.display == "block") div.style.display = "none";
     else div.style.display = "block";
 }
+let quit_btn = document.getElementById("quit");
+quit_btn.onclick = (event) =>{
+    window.location.replace("../news_page/news.html");
+}
 let genres = []
 function changeGenres(genre_btn){
     if (genres.indexOf(genre_btn.id) == -1 && genres.length < 3){
@@ -53,11 +57,13 @@ function Error(text){
     let err_str = `<p id="err_text">${text}</p>`;
     err.insertAdjacentHTML("afterbegin", err_str);
 }
+let welldone = document.getElementById("welldone");
 create_btn.onclick = (event) =>{
     if (title.value.length < 4) Error("Заголовок слишком короткий!");
     else if (text.value.length < 4) Error("Текста слишком мало!");
     else if (genres.length == 0) Error("Выберите жанр!");
     else{
+        welldone.style.display = 'block';
         let id = JSON.parse(localStorage.getItem("/anime")).length+JSON.parse(localStorage.getItem("/books")).length+JSON.parse(localStorage.getItem("/humor")).length+JSON.parse(localStorage.getItem("/games")).length+JSON.parse(localStorage.getItem("/music")).length+JSON.parse(localStorage.getItem("/health")).length+JSON.parse(localStorage.getItem("/sport")).length+JSON.parse(localStorage.getItem("/buety")).length+JSON.parse(localStorage.getItem("/food")).length+JSON.parse(localStorage.getItem("/technologies")).length+JSON.parse(localStorage.getItem("/cars")).length+JSON.parse(localStorage.getItem("/space")).length;
         id = String(id).padStart(8, "0");
         for(let i of genres){

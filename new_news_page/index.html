@@ -11,6 +11,7 @@
 </head>
 <body>
     <div class="container">
+        <button id="quit">Назад</button>
         <h2>Создать новость</h2>
         <div class="window">
             <input type="text" id="title" placeholder="Заголовок">
@@ -36,6 +37,13 @@
         <button id="create">Создать</button>
         <div id="err"></div>
         <script src="script.js"></script>
+        <div id = "welldone" style="display: none;">
+            <p class="hooray">Новость успешно создана</p>
+            <div class="buttons">
+            <button id = "back">Выйти</button>
+            <button id = "new">Создать ещё новость</button>
+            </div>
+        </div>
     </div>
 </body>
 </html>

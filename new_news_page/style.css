@@ -61,6 +61,7 @@ input{
     border: 1px solid black;
     border-right: 0;
     outline:none;
+    padding-left: 5px;
 }
 p{
     margin-top: 20px;
@@ -75,6 +76,7 @@ textarea{
     resize: none;
     outline:none;
     border: 1px solid black;
+    padding: 10px;
 }
 .menu_btn{
     position: relative;
@@ -100,4 +102,59 @@ textarea{
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
     margin-bottom: 15px;
+}
+#quit{
+    left: 11%;
+    top: 3%;
+    width:6%;
+    height: 3%;
+    position: absolute;
+    font-family: "Montserrat", sans-serif;
+    background-color: rgb(255, 130, 108);
+    cursor: pointer;
+    border: 1px black solid;
+    border-radius: 15px;
+}
+#quit:hover{
+    background-color: rgb(252, 87, 57);
+}
+#welldone{
+    position: absolute;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 15px;
+    top: 30%;
+    height: 30%;
+    width: 45%;
+    padding-bottom: 30px;
+}
+.hooray{
+    font-family: "Montserrat", sans-serif;
+    font-size: 45px;
+    margin: auto;
+    margin-top: 30px;
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+#back, #new{
+   width: 30%;
+   height: 30px;
+   cursor: pointer;
+   border: 1px black solid;
+   border-radius: 15px;
+   font-family: "Montserrat", sans-serif;
+}
+#back{
+    background-color: rgb(255, 130, 108);
+}
+#back:hover{
+    background-color: rgb(252, 87, 57);
+}
+#new{
+    background-color: rgb(190, 253, 168);
+}
+#new:hover{
+    background-color: rgb(152, 251, 116);
 }
