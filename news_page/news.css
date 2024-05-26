@@ -68,3 +68,8 @@ p{
     margin-top: 15px;
     margin-left: 15px;
 }
+.genres{
+    color: blue;
+    font-family: "Radio Canada Big", sans-serif;
+    font-size: 20px;
+}

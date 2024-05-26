@@ -1,26 +1,26 @@
-'use strict';
+"use strict";
 
-if (!(localStorage.getItem(localStorage.getItem("user")))) window.location.replace("../authorization_page/authorization.html");
-let div = document.getElementById('div');
+if (!localStorage.getItem(localStorage.getItem("user")))
+  window.location.replace("../authorization_page/authorization.html");
+let div = document.getElementById("div");
 let menu_btn = document.getElementById("menu");
-menu_btn.onclick = (event) =>{
-    if (div.style.display == "block") div.style.display = "none";
-    else div.style.display = "block";
-}
+menu_btn.onclick = (event) => {
+  if (div.style.display == "block") div.style.display = "none";
+  else div.style.display = "block";
+};
 let quit_btn = document.getElementById("quit");
-quit_btn.onclick = (event) =>{
-    window.location.replace("../news_page/news.html");
-}
-let genres = []
-function changeGenres(genre_btn){
-    if (genres.indexOf(genre_btn.id) == -1 && genres.length < 3){
-        genres.push(genre_btn.id);
-        genre_btn.style.backgroundColor = "rgb(191, 255, 0)";
-    }
-    else if (genres.indexOf(genre_btn.id) != -1) {
-        genre_btn.style.backgroundColor = "rgb(225, 255, 216)";
-        genres.splice(genres.indexOf(genre_btn.id), 1);
-    };
+quit_btn.onclick = (event) => {
+  window.location.replace("../news_page/news.html");
+};
+let genres = [];
+function changeGenres(genre_btn) {
+  if (genres.indexOf(genre_btn.id) == -1 && genres.length < 3) {
+    genres.push(genre_btn.id);
+    genre_btn.style.backgroundColor = "rgb(191, 255, 0)";
+  } else if (genres.indexOf(genre_btn.id) != -1) {
+    genre_btn.style.backgroundColor = "rgb(225, 255, 216)";
+    genres.splice(genres.indexOf(genre_btn.id), 1);
+  }
 }
 let books = document.getElementById("books");
 let anime = document.getElementById("anime");
@@ -47,29 +47,48 @@ technologies.onclick = (event) => changeGenres(technologies);
 cars.onclick = (event) => changeGenres(cars);
 space.onclick = (event) => changeGenres(space);
 
-
 let create_btn = document.getElementById("create");
 let title = document.getElementById("title");
 let text = document.getElementById("text");
 let err = document.getElementById("err");
-function Error(text){
-    err.innerHTML = '';
-    let err_str = `<p id="err_text">${text}</p>`;
-    err.insertAdjacentHTML("afterbegin", err_str);
+function Error(text) {
+  err.innerHTML = "";
+  let err_str = `<p id="err_text">${text}</p>`;
+  err.insertAdjacentHTML("afterbegin", err_str);
 }
 let welldone = document.getElementById("welldone");
-create_btn.onclick = (event) =>{
-    if (title.value.length < 4) Error("Заголовок слишком короткий!");
-    else if (text.value.length < 4) Error("Текста слишком мало!");
-    else if (genres.length == 0) Error("Выберите жанр!");
-    else{
-        welldone.style.display = 'block';
-        let id = JSON.parse(localStorage.getItem("/anime")).length+JSON.parse(localStorage.getItem("/books")).length+JSON.parse(localStorage.getItem("/humor")).length+JSON.parse(localStorage.getItem("/games")).length+JSON.parse(localStorage.getItem("/music")).length+JSON.parse(localStorage.getItem("/health")).length+JSON.parse(localStorage.getItem("/sport")).length+JSON.parse(localStorage.getItem("/buety")).length+JSON.parse(localStorage.getItem("/food")).length+JSON.parse(localStorage.getItem("/technologies")).length+JSON.parse(localStorage.getItem("/cars")).length+JSON.parse(localStorage.getItem("/space")).length;
-        id = String(id).padStart(8, "0");
-        for(let i of genres){
-            let data = JSON.parse(localStorage.getItem("/"+i));
-            data.push([[title.value],[text.value],[id],[genres]]);
-            localStorage.setItem("/"+i,JSON.stringify(data));
-        }
+create_btn.onclick = (event) => {
+  if (title.value.length < 4) Error("Заголовок слишком короткий!");
+  else if (text.value.length < 4) Error("Текста слишком мало!");
+  else if (genres.length == 0) Error("Выберите жанр!");
+  else {
+    welldone.style.display = "block";
+    let id =
+      JSON.parse(localStorage.getItem("/anime")).length +
+      JSON.parse(localStorage.getItem("/books")).length +
+      JSON.parse(localStorage.getItem("/humor")).length +
+      JSON.parse(localStorage.getItem("/games")).length +
+      JSON.parse(localStorage.getItem("/music")).length +
+      JSON.parse(localStorage.getItem("/health")).length +
+      JSON.parse(localStorage.getItem("/sport")).length +
+      JSON.parse(localStorage.getItem("/buety")).length +
+      JSON.parse(localStorage.getItem("/food")).length +
+      JSON.parse(localStorage.getItem("/technologies")).length +
+      JSON.parse(localStorage.getItem("/cars")).length +
+      JSON.parse(localStorage.getItem("/space")).length;
+    id = String(id).padStart(8, "0");
+    for (let i of genres) {
+      let data = JSON.parse(localStorage.getItem("/" + i));
+      data.push([[title.value], [text.value], [id], [genres]]);
+      localStorage.setItem("/" + i, JSON.stringify(data));
     }
+  }
+};
+let back_btn = document.getElementById("back");
+back_btn.onclick = (event) =>{
+    window.location.replace("../news_page/news.html");
+}
+let new_btn = document.getElementById("new");
+new_btn.onclick = (event) =>{
+    window.location.replace("../new_news_page/index.html");
 }
